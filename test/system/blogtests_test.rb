@@ -14,7 +14,7 @@ class BlogtestsTest < ApplicationSystemTestCase
     visit blogtests_url
     click_on "New Blogtest"
 
-    fill_in "Content", with: @blogtest.content
+    fill_in "Text", with: @blogtest.text
     fill_in "Title", with: @blogtest.title
     click_on "Create Blogtest"
 
@@ -26,7 +26,7 @@ class BlogtestsTest < ApplicationSystemTestCase
     visit blogtests_url
     click_on "Edit", match: :first
 
-    fill_in "Content", with: @blogtest.content
+    fill_in "Text", with: @blogtest.text
     fill_in "Title", with: @blogtest.title
     click_on "Update Blogtest"
 
