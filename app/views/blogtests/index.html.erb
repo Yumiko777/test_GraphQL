@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blogtests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogtests.each do |blogtest| %>
+      <tr>
+        <td><%= blogtest.title %></td>
+        <td><%= blogtest.content %></td>
+        <td><%= link_to 'Show', blogtest %></td>
+        <td><%= link_to 'Edit', edit_blogtest_path(blogtest) %></td>
+        <td><%= link_to 'Destroy', blogtest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blogtest', new_blogtest_path %>
